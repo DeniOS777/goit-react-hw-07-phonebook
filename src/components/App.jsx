@@ -1,16 +1,28 @@
-export const App = () => {
+import ContactForm from './ContactForm';
+import ContactList from './ContactList';
+import Filter from './Filter';
+import { Box } from './Box';
+import { useSelector } from 'react-redux';
+import { getContacts } from 'redux/contacts/selectors';
+
+const App = () => {
+  const contacts = useSelector(getContacts);
+
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Box p={4}>
+      <Box as="h1" mb={5}>
+        Phonebook ☎️
+      </Box>
+
+      <ContactForm />
+      <Box as="h2" mb={3}>
+        Contacts
+      </Box>
+      <Filter />
+
+      {contacts.length > 0 && <ContactList />}
+    </Box>
   );
 };
+
+export default App;
