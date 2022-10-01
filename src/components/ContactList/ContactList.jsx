@@ -1,5 +1,4 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { deleteContact } from 'redux/contacts/contactsSlice';
 import ContactItem from '../ContactItem';
 import { ContactsList } from './ContactList.styled';
 import { resetFilter } from 'redux/filter/filterSlice';
@@ -30,7 +29,6 @@ const ContactList = () => {
           name={name}
           phone={phone}
           onDeleteContact={() => {
-            dispatch(deleteContact(id));
             clearFilter();
           }}
         />
