@@ -3,7 +3,7 @@ import ContactList from './ContactList';
 import Filter from './Filter';
 import { Box } from './Box';
 import { useSelector } from 'react-redux';
-import { getContacts } from 'redux/contacts/selectors';
+import { getContacts } from 'redux/contacts/contactsSelectors';
 
 const App = () => {
   const contacts = useSelector(getContacts);
