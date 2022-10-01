@@ -23,12 +23,12 @@ const ContactList = () => {
 
   return (
     <ContactsList>
-      {filteredContacts.map(({ id, name, number }) => (
+      {filteredContacts.map(({ id, name, phone }) => (
         <ContactItem
           key={id}
           id={id}
           name={name}
-          number={number}
+          phone={phone}
           onDeleteContact={() => {
             dispatch(deleteContact(id));
             clearFilter();
