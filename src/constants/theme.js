@@ -7,6 +7,8 @@ export const theme = {
     red: '#c73434',
     redHover: '#b81717',
     lightBlue: '#4cb3d4',
+    lightGrey: '#cecdcd',
+    middleGrey: '#a7a7a7',
     inputBorder: '#888888',
     textPlaceholder: '#929292',
     bodyBackgroundColor: '#f1f1f1',

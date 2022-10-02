@@ -20,7 +20,7 @@ export const ContactsItem = styled.li`
 `;
 
 export const ContactName = styled.p`
-  margin-right: 20px;
+  margin-right: ${p => p.theme.space[3]}px;
   font-size: ${p => p.theme.fontSizes.m};
 `;
 
@@ -31,26 +31,23 @@ export const ContactDelete = styled.button`
   align-items: center;
   justify-content: center;
   padding: 0;
-  /* color: ${({ theme }) => theme.colors.white}; */
   border-style: none;
   border-radius: ${p => p.theme.radii.sm};
-  outline: 1px solid ${({ theme }) => theme.colors.red};
   cursor: pointer;
-  transition: background-color 300ms ease-in-out, transform 100ms ease-in-out;
+  transition: background-color 250ms ease-in-out;
 
   & svg {
     width: 24px;
     height: 24px;
     fill: ${({ theme }) => theme.colors.red};
-    transition: fill 300ms ease-in-out;
+    transition: fill 250ms ease-in-out;
   }
 
-  &:hover svg {
-    fill: ${({ theme }) => theme.colors.white};
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.lightGrey};
   }
 
-  &:hover,
-  :focus {
-    background-color: ${({ theme }) => theme.colors.red};
+  &:active {
+    background-color: ${({ theme }) => theme.colors.middleGrey};
   }
 `;
