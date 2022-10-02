@@ -4,12 +4,12 @@ import ContactForm from './ContactForm';
 import ContactList from './ContactList';
 import Filter from './Filter';
 import { Box } from './Box';
-import { getContacts } from 'redux/contacts/contactsSelectors';
+import { selectorContacts } from 'redux/contacts/contactsSelectors';
 import { fetchContacts } from 'redux/contacts/contactsOperations';
 
 const App = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(selectorContacts);
 
   useEffect(() => {
     dispatch(fetchContacts());

@@ -1,16 +1,17 @@
 import { useSelector, useDispatch } from 'react-redux';
+import { resetFilter } from 'redux/filter/filterSlice';
+import {
+  selectorFilteredContacts,
+  selectorFilterValue,
+} from 'redux/contacts/contactsSelectors';
+import { deleteContact } from 'redux/contacts/contactsOperations';
 import ContactItem from '../ContactItem';
 import { ContactsList } from './ContactList.styled';
-import { resetFilter } from 'redux/filter/filterSlice';
-import { useGetFilteredContacts } from 'hooks/useGetFilteredContacts';
-import { getFilterValue } from 'redux/contacts/contactsSelectors';
-import { deleteContact } from 'redux/contacts/contactsOperations';
 
 const ContactList = () => {
   const dispatch = useDispatch();
-  const filterValue = useSelector(getFilterValue);
-
-  const filteredContacts = useGetFilteredContacts();
+  const filterValue = useSelector(selectorFilterValue);
+  const filteredContacts = useSelector(selectorFilteredContacts);
 
   const clearFilter = () => {
     const emptyFilteredContacts =
