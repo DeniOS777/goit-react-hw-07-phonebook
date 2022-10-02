@@ -4,6 +4,8 @@ export const selectorFilterValue = state => state.filter;
 
 export const selectorContacts = state => state.contacts.items;
 
+export const selectorIsLoading = state => state.contacts.isLoading;
+
 export const selectorFilteredContacts = createSelector(
   [selectorFilterValue, selectorContacts],
   (filterValue, contacts) => {
@@ -14,13 +16,3 @@ export const selectorFilteredContacts = createSelector(
     );
   }
 );
-
-// export const useGetFilteredContacts = () => {
-//   const filterValue = useSelector(selectorFilterValue);
-//   const contacts = useSelector(selectorContacts);
-//   const normalizeFilter = filterValue.toLowerCase();
-
-//   return contacts.filter(({ name }) =>
-//     name.toLowerCase().includes(normalizeFilter)
-//   );
-// };
