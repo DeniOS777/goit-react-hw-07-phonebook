@@ -6,12 +6,8 @@ export const filterSlice = createSlice({
   name: 'filter',
   initialState,
   reducers: {
-    changeFilter(_, { payload }) {
-      return payload;
-    },
-    resetFilter() {
-      return initialState;
-    },
+    changeFilter: (_, { payload }) => payload,
+    resetFilter: () => initialState,
   },
 });
 
