@@ -5,9 +5,9 @@ export const Form = styled.form`
   flex-direction: column;
   margin-bottom: ${p => p.theme.space[5]}px;
   padding: ${p => p.theme.space[5]}px;
-  width: 370px;
   border: ${({ theme }) => `1px solid ${theme.colors.inputBorder}`};
   border-radius: ${p => p.theme.radii.sm};
+  background-color: ${p => p.theme.colors.background};
 `;
 
 export const Label = styled.label`

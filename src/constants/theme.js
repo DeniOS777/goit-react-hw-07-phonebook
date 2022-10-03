@@ -11,6 +11,7 @@ export const theme = {
     middleGrey: '#a7a7a7',
     inputBorder: '#888888',
     textPlaceholder: '#929292',
+    background: '#dcdcdc',
     bodyBackgroundColor: '#f1f1f1',
     contact: '#eff1f3',
   },

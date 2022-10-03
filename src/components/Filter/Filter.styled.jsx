@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 370px;
   margin-bottom: ${p => p.theme.space[5]}px;
   padding-left: ${p => p.theme.space[5]}px;
   padding-right: ${p => p.theme.space[5]}px;
@@ -9,6 +8,7 @@ export const Container = styled.div`
   padding-bottom: ${p => p.theme.space[3]}px;
   border: ${({ theme }) => `1px solid ${theme.colors.inputBorder}`};
   border-radius: ${p => p.theme.radii.sm};
+  background-color: ${p => p.theme.colors.background};
 `;
 
 export const FilterLabel = styled.p`
