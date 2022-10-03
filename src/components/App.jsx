@@ -10,6 +10,9 @@ import {
   selectorIsLoading,
 } from 'redux/contacts/contactsSelectors';
 import { fetchContacts } from 'redux/contacts/contactsOperations';
+import { Loader } from './Loader';
+import { ErrorMessage } from 'components/ErrorMessage';
+import { Container } from './App.styled';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -22,7 +25,7 @@ const App = () => {
   }, [dispatch]);
 
   return (
-    <Box p={3} m="0 auto" maxWidth="382px">
+    <Container>
       <Box as="h1" mb={5}>
         Phonebook ☎️
       </Box>
@@ -34,10 +37,10 @@ const App = () => {
       </Box>
 
       <Filter />
-      {isLoading && <div>Loading contacts...</div>}
-      {error && <div>{error}</div>}
+      {isLoading && <Loader />}
+      {error && <ErrorMessage />}
       {contacts.length > 0 && !error && <ContactList />}
-    </Box>
+    </Container>
   );
 };
 
