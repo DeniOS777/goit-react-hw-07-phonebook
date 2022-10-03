@@ -33,6 +33,7 @@ export const ContactDelete = styled.button`
   padding: 0;
   border-style: none;
   border-radius: ${p => p.theme.radii.sm};
+  background: transparent;
   cursor: pointer;
   transition: background-color 250ms ease-in-out;
 
