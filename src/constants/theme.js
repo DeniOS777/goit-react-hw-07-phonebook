@@ -49,6 +49,9 @@ export const theme = {
   borders: {
     none: 'none',
     normal: '1px solid',
+    middle: '2px solid',
+    large: '4px solid',
+    largest: '8px solid',
   },
 
   radii: {
