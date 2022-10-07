@@ -37,7 +37,7 @@ const App = () => {
       </Box>
 
       <Filter />
-      {isLoading && <Loader />}
+      {isLoading && <Loader height="20" />}
       {error && <ErrorMessage />}
       {contacts.length > 0 && !error && <ContactList />}
     </Container>
