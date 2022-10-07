@@ -58,7 +58,7 @@ export const AddContact = styled.button`
   }
 
   &:disabled {
-    background-color: ${({ theme }) => theme.colors.middleGrey};
+    background-color: ${({ theme }) => theme.colors.lightGrey};
     transform: none;
     cursor: not-allowed;
   }

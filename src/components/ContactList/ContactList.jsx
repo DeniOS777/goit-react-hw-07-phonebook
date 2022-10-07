@@ -4,7 +4,6 @@ import {
   selectorFilteredContacts,
   selectorFilterValue,
 } from 'redux/contacts/contactsSelectors';
-// import { deleteContact } from 'redux/contacts/contactsOperations';
 import ContactItem from '../ContactItem';
 import { ContactsList } from './ContactList.styled';
 
@@ -23,11 +22,6 @@ const ContactList = () => {
     }
   };
 
-  // const handleDeletingContact = id => {
-  //   dispatch(deleteContact(id));
-  //   clearFilter();
-  // };
-
   return (
     <ContactsList>
       {filteredContacts.map(({ id, name, phone }) => (
@@ -37,7 +31,6 @@ const ContactList = () => {
           name={name}
           phone={phone}
           clearFilter={clearFilter}
-          // onDeleteContact={() => handleDeletingContact(id)}
         />
       ))}
     </ContactsList>

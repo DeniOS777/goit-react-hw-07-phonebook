@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { toast } from 'react-toastify';
 import { deleteContact } from 'redux/contacts/contactsOperations';
 import { ContactsItem, ContactName, ContactDelete } from './ContactItem.styled';
 import { VscTrash } from 'react-icons/vsc';
@@ -13,7 +14,10 @@ const ContactItem = ({ id, name, phone, clearFilter }) => {
   const handleDeletingContact = id => {
     setIsDeleting(true);
     dispatch(deleteContact(id)).then(res => {
-      if (res.meta.requestStatus === 'fulfilled') clearFilter();
+      if (res.meta.requestStatus === 'fulfilled') {
+        toast.success(`The contact named ${name} deleted successfully`);
+        clearFilter();
+      }
     });
   };
 
@@ -22,6 +26,7 @@ const ContactItem = ({ id, name, phone, clearFilter }) => {
       <ContactName>
         {name}: <a href="tel:">{phone}</a>
       </ContactName>
+
       {isDeleting ? (
         <Loader height="35" />
       ) : (

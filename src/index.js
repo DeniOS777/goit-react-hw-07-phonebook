@@ -4,6 +4,7 @@ import { store } from 'redux/store';
 import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import App from 'components/App';
 import { GlobalStyle } from './components/GlobalStyle';
 import { theme } from './constants';
@@ -15,7 +16,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <App />
       </Provider>
       <GlobalStyle />
-      <ToastContainer autoClose={3000} />
+      <ToastContainer autoClose={2000} />
     </ThemeProvider>
   </React.StrictMode>
 );

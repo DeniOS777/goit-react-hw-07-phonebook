@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { nanoid } from 'nanoid';
 import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { selectorContacts } from 'redux/contacts/contactsSelectors';
 import { addContact } from 'redux/contacts/contactsOperations';
 import { Loader } from 'components/Loader';
@@ -95,7 +94,7 @@ const ContactForm = () => {
         required
       />
       <AddContact type="submit" disabled={isAdding}>
-        {isAdding ? <Loader height="18" color="#ffffff" /> : 'Add contact'}
+        {isAdding ? <Loader height="18" /> : 'Add contact'}
       </AddContact>
     </Form>
   );
