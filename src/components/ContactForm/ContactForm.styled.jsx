@@ -56,4 +56,10 @@ export const AddContact = styled.button`
   &:active {
     transform: scale(0.98);
   }
+
+  &:disabled {
+    background-color: ${({ theme }) => theme.colors.middleGrey};
+    transform: none;
+    cursor: not-allowed;
+  }
 `;
