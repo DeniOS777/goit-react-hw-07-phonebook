@@ -1,7 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
+import { AiOutlineSearch } from 'react-icons/ai';
 import { changeFilter } from 'redux/filter/filterSlice';
 import { selectorFilterValue } from 'redux/contacts/contactsSelectors';
-import { Container, FilterLabel, InputSearch } from './Filter.styled';
+import { Container, Wrapper, FilterLabel, InputSearch } from './Filter.styled';
 
 const Filter = () => {
   const filterValue = useSelector(selectorFilterValue);
@@ -10,15 +11,17 @@ const Filter = () => {
   return (
     <Container>
       <FilterLabel>Find contacts by name:</FilterLabel>
-      <InputSearch
-        autoComplete="off"
-        type="text"
-        name="filter"
-        placeholder="Search contacts..."
-        value={filterValue}
-        onChange={e => dispatch(changeFilter(e.target.value.trimStart()))}
-      />
-      🔎
+      <Wrapper>
+        <InputSearch
+          autoComplete="off"
+          type="text"
+          name="filter"
+          placeholder="Search contacts..."
+          value={filterValue}
+          onChange={e => dispatch(changeFilter(e.target.value.trimStart()))}
+        />
+        <AiOutlineSearch size="20" />
+      </Wrapper>
     </Container>
   );
 };
