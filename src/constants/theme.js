@@ -43,6 +43,7 @@ export const theme = {
   },
 
   lineHeights: {
+    text: 1,
     body: 1.5,
     heading: 1.125,
   },

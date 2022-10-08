@@ -57,12 +57,12 @@ export const CountDescription = styled.div`
 `;
 
 export const Text = styled.p`
-  color: #fff;
+  color: ${p => p.theme.colors.white};
 `;
 
 export const Count = styled.p`
   font-size: ${p => p.theme.fontSizes.xm};
-  font-weight: 600;
-  line-height: 1;
-  color: #fff;
+  font-weight: ${p => p.theme.fontWeights.lightBold};
+  line-height: ${p => p.theme.lineHeights.text};
+  color: ${p => p.theme.colors.white};
 `;
