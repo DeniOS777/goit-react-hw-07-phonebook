@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  display: flex;
+  justify-content: space-between;
   margin-bottom: ${p => p.theme.space[5]}px;
   padding-left: ${p => p.theme.space[5]}px;
   padding-right: ${p => p.theme.space[5]}px;
@@ -34,12 +36,33 @@ export const InputSearch = styled.input`
   padding-right: ${p => p.theme.space[3]}px;
   font-size: ${p => p.theme.fontSizes.m};
   letter-spacing: 0.03em;
-  border: ${({ theme }) => `1px solid ${theme.colors.inputBorder}`};
+  border: ${p => `1px solid ${p.theme.colors.inputBorder}`};
   border-radius: ${p => p.theme.radii.sm};
 
   &::placeholder {
     font-size: ${p => p.theme.fontSizes.s};
-    color: ${({ theme }) => theme.colors.textPlaceholder};
+    color: ${p => p.theme.colors.textPlaceholder};
     letter-spacing: 0.03em;
   }
+`;
+
+export const CountDescription = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  background-color: ${p => p.theme.colors.inputBorder};
+  border-radius: ${p => p.theme.radii.sm};
+`;
+
+export const Text = styled.p`
+  color: #fff;
+`;
+
+export const Count = styled.p`
+  font-size: ${p => p.theme.fontSizes.xm};
+  font-weight: 600;
+  line-height: 1;
+  color: #fff;
 `;
