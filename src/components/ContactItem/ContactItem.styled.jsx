@@ -22,6 +22,11 @@ export const ContactsItem = styled.li`
 export const ContactName = styled.p`
   margin-right: ${p => p.theme.space[3]}px;
   font-size: ${p => p.theme.fontSizes.m};
+
+  & a:focus {
+    outline: ${p => `2px solid ${p.theme.colors.lightBlue}`};
+    border-color: transparent;
+  }
 `;
 
 export const ContactDelete = styled.button`
@@ -50,5 +55,10 @@ export const ContactDelete = styled.button`
 
   &:active {
     background-color: ${({ theme }) => theme.colors.middleGrey};
+  }
+
+  &:focus {
+    outline: ${p => `2px solid ${p.theme.colors.lightBlue}`};
+    border-color: transparent;
   }
 `;

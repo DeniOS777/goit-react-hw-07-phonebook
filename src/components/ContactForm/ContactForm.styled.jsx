@@ -11,18 +11,17 @@ export const Form = styled.form`
 `;
 
 export const Label = styled.label`
-  display: inline-block;
   margin-bottom: ${p => p.theme.space[2]}px;
   font-size: ${p => p.theme.fontSizes.lm};
   letter-spacing: 0.03em;
 `;
 
 export const Input = styled.input`
+  width: 100%;
   padding-top: ${p => p.theme.space[3]}px;
   padding-bottom: ${p => p.theme.space[3]}px;
   padding-left: ${p => p.theme.space[6]}px;
   padding-right: ${p => p.theme.space[3]}px;
-  width: 100%;
   font-size: ${p => p.theme.fontSizes.m};
   letter-spacing: 0.03em;
   border: ${p => `1px solid ${p.theme.colors.inputBorder}`};
@@ -32,6 +31,15 @@ export const Input = styled.input`
     font-size: ${p => p.theme.fontSizes.s};
     color: ${p => p.theme.colors.textPlaceholder};
     letter-spacing: 0.03em;
+  }
+
+  &:hover {
+    border-color: ${p => p.theme.colors.black};
+  }
+
+  &:focus {
+    outline: ${p => `2px solid ${p.theme.colors.lightBlue}`};
+    border-color: transparent;
   }
 `;
 
@@ -72,6 +80,11 @@ export const AddContact = styled.button`
   border-radius: ${p => p.theme.radii.sm};
   cursor: pointer;
   transition: background-color 300ms ease-in-out, transform 100ms ease-in-out;
+
+  &:focus {
+    outline: ${p => `2px solid ${p.theme.colors.lightBlue}`};
+    border-color: transparent;
+  }
 
   &:hover,
   :focus {
