@@ -13,7 +13,7 @@ export const theme = {
     textPlaceholder: '#929292',
     background: '#dcdcdc',
     bodyBackgroundColor: '#f1f1f1',
-    contact: '#eff1f3',
+    contact: '#dfdfdf',
   },
 
   space: [0, 2, 4, 8, 16, 20, 32, 64, 128, 256],
