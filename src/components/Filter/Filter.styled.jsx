@@ -45,10 +45,6 @@ export const InputSearch = styled.input`
     letter-spacing: 0.03em;
   }
 
-  &:hover {
-    border: ${p => `1px solid ${p.theme.colors.black}`};
-  }
-
   &:focus {
     outline: ${p => `2px solid ${p.theme.colors.lightBlue}`};
     border-color: transparent;
